@@ -1,13 +1,13 @@
 package ru.netology.service;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class CashbackHackServiceTest {
+public class CashbackHackServiceTest {
 
     @Test
-    void shouldRemainIfItsALittlenotEnoughFor1000() {
+    public void shouldRemainIfItsALittlenotEnoughFor1000() {
         CashbackHackService service = new CashbackHackService();
         int expected = 250;
         int actual = service.remain(750);
@@ -15,7 +15,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldRemainIfItsALittlenotEnoughForMore1000() {
+    public void shouldRemainIfItsALittlenotEnoughForMore1000() {
         CashbackHackService service = new CashbackHackService();
         int expected = 450;
         int actual = service.remain(1550);
@@ -31,7 +31,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    void shouldRemainIfItsA1000() {
+    public void shouldRemainIfItsA1000() {
         CashbackHackService service = new CashbackHackService();
         int expected = 0;
         int actual = service.remain(1000);
